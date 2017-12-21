@@ -1,9 +1,9 @@
-<div class="container">
-    <h3><i>Poll Posts</i></h3>
+<div class="container-fluid">
+    <h3><i>{{ title }}</i></h3>
     <br>
     <div class="form-group">
         <div class="input-group">
-            <input type="text" class="form-control" name="searchString" placeholder="Search by Title" [(ngModel)]="searchString">
+            <input type="text" class="form-control" name="Search" placeholder="Search by Title" [(ngModel)]="Search">
             <div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
         </div>
     </div>
@@ -11,13 +11,13 @@
         <thead>
             <tr>
                 <th>Title</th>
-                <th class="column-2">Url</th>
-                <th class="column-3">Created_at</th>
-                <th class="column-4">Author</th>
+                <th>Url</th>
+                <th>Created_at</th>
+                <th>Author</th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let post of data.hits | filter : 'title' : searchString; let i = index" (click)='showClick(post)' data-toggle="modal" data-target="#showUp">
+            <tr *ngFor="let post of data.hits | filter:'title': Search; let i = index" (click)='showClick(post)' data-toggle="modal" data-target="#showUp">
                 <td class="post-1">{{ post.title }}</td>
                 <td class="post-2">{{ post.url }}</td>
                 <td class="post-3">{{ post.created_at }}</td>

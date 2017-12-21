@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 15px;
+}
 thead tr th {
     font-size: 14px;
     text-align: left;
@@ -54,11 +61,11 @@ input.form-control {
 }
 
 .post-1 {
-    width: 25% !important;
+    width: 30% !important;
 }
 
 .post-2 {
-    width: 40% !important;
+    width: 35% !important;
 }
 
 .post-3 {
